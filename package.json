@@ -1,0 +1,25 @@
+{
+	"name": "magnimage-ec90",
+	"version": "0.0.1",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier -w .",
+		"lint:raw": "eslint --ext .ts --ext .js --ignore-pattern dist --ignore-pattern pkg",
+		"lint": "yarn lint:raw ."
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-your-module-name.git"
+	},
+	"dependencies": {
+		"@companion-module/base": "~1.4.0",
+		"eslint": "^8.47.0",
+		"eslint-plugin-prettier": "^5.0.0"
+	},
+	"devDependencies": {
+		"@companion-module/tools": "^1.2.0",
+		"prettier": "3.0.2"
+	},
+	"prettier": "@companion-module/tools/.prettierrc.json"
+}

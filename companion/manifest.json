@@ -1,0 +1,26 @@
+{
+	"id": "magnimage-mig-ec90",
+	"name": "magnimage-mig-ec90",
+	"shortname": "ec90",
+	"description": "Control basic loading and taking of presets.",
+	"version": "0.1.0",
+	"license": "MIT",
+	"repository": "git+https://github.com/bitfocus/companion-module-magnimage-ec90.git",
+	"bugs": "https://github.com/bitfocus/companion-module-magnimage-ec90/issues",
+	"maintainers": [
+		{
+			"name": "Ockert Marais",
+			"email": "ockertnm@gmail.com"
+		}
+	],
+	"runtime": {
+		"type": "node18",
+		"api": "nodejs-ipc",
+		"apiVersion": "0.0.0",
+		"entrypoint": "../main.js"
+	},
+	"legacyIds": [],
+	"manufacturer": "Magnimage",
+	"products": ["EC90"],
+	"keywords": ["magnimage", "ec90", "ec-90", "mig690", "mig-690", "mig-ec90"]
+}
