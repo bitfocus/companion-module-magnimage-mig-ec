@@ -1,11 +1,14 @@
 const { InstanceBase, Regex, runEntrypoint, InstanceStatus, UDPHelper } = require('@companion-module/base')
 const UpgradeScripts = require('./upgrades')
-const UpdateActions = require('./actions')
+const actions = require('./actions')
 const getPresets = require('./presets')
+const mig_config = require('./choices')
 
 class EC90ModuleInstance extends InstanceBase {
 	constructor(internal) {
 		super(internal)
+
+		this.CHOICES_MODEL = Object.values(mig_config.CONFIG_MODEL)
 	}
 
 	async init(config) {
@@ -15,9 +18,9 @@ class EC90ModuleInstance extends InstanceBase {
 
 		this.updateStatus(InstanceStatus.Ok)
 
-		this.setPresetDefinitions(getPresets())
+		this.setActionDefinitions(actions.getActions(this))
 
-		this.updateActions() // export actions
+		this.setPresetDefinitions(getPresets(this))
 	}
 
 	async destroy() {
@@ -48,6 +51,10 @@ class EC90ModuleInstance extends InstanceBase {
 		this.init_udp()
 
 		this.setVariableDefinitions([])
+
+		this.setActionDefinitions(actions.getActions(this))
+
+		this.setPresetDefinitions(getPresets(this))
 	}
 
 	getConfigFields() {
@@ -56,8 +63,17 @@ class EC90ModuleInstance extends InstanceBase {
 				type: 'textinput',
 				id: 'host',
 				label: 'Target IP',
-				width: 8,
+				width: 6,
 				regex: Regex.IP,
+				default: '192.168.0.10'
+			},
+			{
+				type: 'dropdown',
+				id: 'modelID',
+				label: 'Model',
+				width: 6,
+				choices: this.CHOICES_MODEL,
+				default: 'ec90',
 			},
 		]
 	}
@@ -91,11 +107,6 @@ class EC90ModuleInstance extends InstanceBase {
 			this.updateStatus(InstanceStatus.BadConfig)
 		}
 	}
-
-	updateActions() {
-		UpdateActions(this)
-	}
-
 }
 
 runEntrypoint(EC90ModuleInstance, UpgradeScripts)

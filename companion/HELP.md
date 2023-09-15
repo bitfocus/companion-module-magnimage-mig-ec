@@ -1,4 +1,4 @@
-## Magnimage EC90
+## Magnimage MIG-EC
 
 This module will allow you to control basic functionality of the Magnimage EC90.
 

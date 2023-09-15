@@ -1,12 +1,12 @@
 {
-	"id": "magnimage-mig-ec90",
-	"name": "magnimage-mig-ec90",
-	"shortname": "ec90",
+	"id": "magnimage-mig-ec",
+	"name": "magnimage-mig-ec",
+	"shortname": "mig-ec",
 	"description": "Control basic loading and taking of presets.",
 	"version": "0.1.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-magnimage-ec90.git",
-	"bugs": "https://github.com/bitfocus/companion-module-magnimage-ec90/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-magnimage-mig-ec.git",
+	"bugs": "https://github.com/bitfocus/companion-module-magnimage-mig-ec/issues",
 	"maintainers": [
 		{
 			"name": "Ockert Marais",
@@ -21,6 +21,6 @@
 	},
 	"legacyIds": [],
 	"manufacturer": "Magnimage",
-	"products": ["EC90"],
-	"keywords": ["magnimage", "ec90", "ec-90", "mig690", "mig-690", "mig-ec90"]
+	"products": ["MIG-EC90", "MIG-EC80"],
+	"keywords": ["magnimage", "ec90", "ec-90", "mig690", "mig-690", "mig-ec90", "ec80", "ec-80", "mig680", "mig-680", "mig-ec80"]
 }
