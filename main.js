@@ -65,7 +65,7 @@ class EC90ModuleInstance extends InstanceBase {
 				label: 'Target IP',
 				width: 6,
 				regex: Regex.IP,
-				default: '192.168.0.10'
+				default: '192.168.0.10',
 			},
 			{
 				type: 'dropdown',

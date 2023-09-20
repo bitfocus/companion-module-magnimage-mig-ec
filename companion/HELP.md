@@ -1,6 +1,6 @@
 ## Magnimage MIG-EC
 
-This module will allow you to control basic functionality of the Magnimage EC90.
+This module will allow you to control basic functionality of Magnimage EC series switcher/scalers.
 
 ### Configuration
 - Enter the IP address of the device in the configuration settings.
