@@ -13,12 +13,12 @@
 		"url": "git+https://github.com/bitfocus/companion-module-magnimage-mig-ec.git"
 	},
 	"dependencies": {
-		"@companion-module/base": "~1.4.0",
+		"@companion-module/base": "~1.15.0",
 		"eslint": "^8.47.0",
 		"eslint-plugin-prettier": "^5.0.0"
 	},
 	"devDependencies": {
-		"@companion-module/tools": "^2.8.0",
+		"@companion-module/tools": "^2.9.0",
 		"prettier": "3.0.2"
 	},
 	"prettier": "@companion-module/tools/.prettierrc.json"
