@@ -3,7 +3,7 @@
 	"name": "magnimage-mig-ec",
 	"shortname": "mig-ec",
 	"description": "Control basic loading and taking of presets.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"repository": "git+https://github.com/bitfocus/companion-module-magnimage-mig-ec.git",
 	"bugs": "https://github.com/bitfocus/companion-module-magnimage-mig-ec/issues",
@@ -14,7 +14,7 @@
 		}
 	],
 	"runtime": {
-		"type": "node18",
+		"type": "node26",
 		"api": "nodejs-ipc",
 		"apiVersion": "0.0.0",
 		"entrypoint": "../main.js"
